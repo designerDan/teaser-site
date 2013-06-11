@@ -1,0 +1,947 @@
+/*
+ * HTML5 Boilerplate
+ *
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html,
+button,
+input,
+select,
+textarea {
+    color: #222;
+}
+
+@font-face {
+  font-family: 'Sorts Mill Goudy';
+  src: url('../fonts/GoudyStM-webfont.eot?') format('eot'), url('../fonts/GoudyStM-webfont.woff') format('woff'), url('../fonts/GoudyStM-webfont.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Sorts Mill Goudy Italic';
+  src: url('../fonts/GoudyStM-Italic-webfont.eot?') format('eot'), url('../fonts/GoudyStM-Italic-webfont.woff') format('woff'), url('../fonts/GoudyStM-Italic-webfont.ttf') format('truetype');
+  font-style: italic;
+}
+
+body {
+    font-family: 'Sorts Mill Goudy', serif;
+    font-size: 1em;
+    line-height: 1.6;
+}
+
+/*
+ * Remove text-shadow in selection highlight: h5bp.com/i
+ * These selection rule sets have to be separate.
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+/*
+ * Remove the gap between images and the bottom of their containers: h5bp.com/i/440
+ */
+
+img {
+    vertical-align: middle;
+    display: block;
+    border: 0;
+    width: 100%;
+    height: auto;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+    resize: vertical;
+}
+
+/* ==========================================================================
+   Chrome Frame prompt
+   ========================================================================== */
+
+.chromeframe {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+/* ==========================================================================
+   Grid classes
+   ========================================================================== */
+.one-fourth-mobile,
+.three-fourths-mobile,
+.one-whole-mobile {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.one-fourth-mobile {
+    width: 25%;
+}
+
+.three-fourths-mobile {
+    width: 75%;
+}
+
+.one-third-mobile{
+    width: 33.3333%;
+}
+
+.one-whole-mobile {
+    width: 100%;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+*,
+*:before,
+*:after {
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+}
+
+p {
+    /* box-model alterations */
+    margin: 0;
+
+    /* type styles */
+    font-family: 'Sorts Mill Goudy Italic', serif;
+}
+
+h1,
+h2  {
+    /* type styles */
+    font-family: 'Philosopher', sans-serif;
+    font-weight: 400;
+
+    /* aesthetics */
+    color: #1d1a1c;
+}
+
+h2 {
+    /* box-model alterations */
+    margin: 0;
+
+    /* type styles */
+    font-size: 2em;
+    line-height: 2.5;
+}
+
+button {
+    font-family: 'Philosopher', sans-serif;
+
+    border: none;
+    background: transparent;
+}
+
+.page {
+    /* aesthetics */
+    background: #fbfbdb; /* Old browsers */
+    background: -moz-linear-gradient(top,  #fbfbdb 0%, #b05471 40%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#fbfbdb), color-stop(40%,#b05471)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  #fbfbdb 0%,#b05471 40%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  #fbfbdb 0%,#b05471 40%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  #fbfbdb 0%,#b05471 40%); /* IE10+ */
+    background: linear-gradient(to bottom,  #fbfbdb 0%,#b05471 40%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fbfbdb', endColorstr='#b05471',GradientType=0 ); /* IE6-9 */
+}
+
+.brand {
+    color: #af1e3c;
+}
+
+.pull-left {
+    float: left;
+}
+
+.pull-right {
+    float: right;
+}
+
+.classic-style {
+    /* type styles */
+    text-indent: 1.25em;
+}
+
+.btn {
+    /* box-model alterations */
+    padding: 0 1em;
+
+    display: block;
+
+    /* type styles */
+    font-family: 'Philosopher', sans-serif;
+    font-weight: 700;
+    line-height: 3em;
+    text-transform: uppercase;
+    text-decoration: none;
+
+    /* aesthetics */
+    background-color: #af1e3c;
+    color: #fff;
+    text-shadow: 0 1px 0 #000;
+    border: 1px solid #541227;
+
+    -webkit-border-radius: 4px;
+       -moz-border-radius: 4px;
+            border-radius: 4px;
+
+    -webkit-box-shadow: inset 0 1px 0 #db5781, 0 2px 3px #1d1a1c;
+       -moz-box-shadow: inset 0 1px 0 #db5781, 0 2px 3px #1d1a1c;
+            box-shadow: inset 0 1px 0 #db5781, 0 2px 3px #1d1a1c;
+
+    /* transitions */
+    -webkit-transition: all 0.5s ease;
+       -moz-transition: all 0.5s ease;
+         -o-transition: all 0.5s ease;
+        -ms-transition: all 0.5s ease;
+            transition: all 0.5s ease;
+}
+
+.btn:hover,
+.btn:active {
+    /* aesthetics */
+    background-color: #fff;
+    color: #af1e3c;
+    text-shadow: none;
+    border-color: #eee;
+}
+
+.btn:hover {
+    /* aesthetics */
+    -webkit-box-shadow: inset 0 1px 0 #eee, 0 2px 3px #1d1a1c;
+       -moz-box-shadow: inset 0 1px 0 #eee, 0 2px 3px #1d1a1c;
+            box-shadow: inset 0 1px 0 #eee, 0 2px 3px #1d1a1c;
+}
+
+.btn:active {
+    /* aesthetics */
+    -webkit-box-shadow: inset 0 1px 0 #eee;
+       -moz-box-shadow: inset 0 1px 0 #eee;
+            box-shadow: inset 0 1px 0 #eee;
+
+    /* transitions */
+    -webkit-transition: all 0.1s ease;
+       -moz-transition: all 0.1s ease;
+         -o-transition: all 0.1s ease;
+        -ms-transition: all 0.1s ease;
+            transition: all 0.1s ease;
+}
+
+/*
+ index page
+ */
+
+.header {
+    /* box-model alterations */
+    padding: 2em 0;
+
+    /* positioning */
+    position: absolute;
+    top: 0;
+    z-index: 1000;
+
+    /* aesthetics */
+    background-color: #fff;
+    box-shadow: 0px 0px 5px #222;
+}
+
+.logo {
+    /* dimensions */
+    max-width: 320px;
+}
+
+.billboard {
+    /* dimensions */
+    max-width: 1170px;
+}
+
+#sequence {
+    /*dimensions */
+    width: 100%;
+    height: 100%;
+
+    /* positioning */
+    position: relative;
+
+    /* box-model alterations */
+    margin: 0 0 .5em;
+    padding: 0;
+
+    /* etc... */
+    overflow: hidden;
+}
+
+#sequence h2{
+    /* type styles */
+    font-size: 2em;
+    text-align: center;
+    line-height: 2;
+
+    /* aesthetics */
+    color: #fff;
+}
+
+#sequence ul {
+    /* box-model alterations */
+    padding: 0;
+    margin: 0;
+    
+    /* etc... */
+    list-style-type: none;
+}
+
+#sequence > .sequence-canvas {
+    /* dimensions */
+    width: 100%;
+    height: 100%;
+}
+
+#sequence > .sequence-canvas li > * {
+    /* dimensions */
+    width: 100%;
+
+    /* positioning */
+    position: absolute;
+    z-index: 1;
+}
+
+#sequence figure {
+    /* positioning */
+    left: 200px;
+
+    /* aesthetics */
+    opacity: 0;
+
+    /* transitions */
+    -webkit-transition: all 1s ease;
+       -moz-transition: all 1s ease;
+         -o-transition: all 1s ease;
+        -ms-transition: all 1s ease;
+            transition: all 1s ease;
+}
+
+#sequence figure img {
+    /* dimensions */
+    max-width: 1170px;
+
+    /* box-model alterations */
+    margin: 0 auto;
+}
+
+#sequence figcaption {
+    /* positioning */
+    position: relative;
+    left: -400px;
+
+    /* type styles */
+    font-family: 'Sorts Mill Goudy Italic', serif;
+    font-size: .85em;
+    text-align: center;
+    line-height: 1.4;
+
+    /* aesthetics */
+    color: #fff;
+
+    /* transitions */
+    -webkit-transition: all 1s ease;
+       -moz-transition: all 1s ease;
+         -o-transition: all 1s ease;
+        -ms-transition: all 1s ease;
+            transition: all 1s ease;
+}
+
+#sequence figcaption span {
+    /* type styles */
+    font-family: 'Philosopher', sans-serif;
+    font-size: 1.5em;
+}
+
+#sequence .animate-in figure,
+#sequence .animate-in figure > figcaption {
+    /* positioning */
+    left: 0;
+
+    /* aesthetics */
+    opacity: 1;
+}
+
+#sequence .animate-out figure {
+    /* positioning */
+    left: -400px;
+
+    /* aesthetics */
+    opacity: 0;
+}
+
+.sequence-buttons {
+    /* positioning */
+    position: relative;
+
+    /* box-model alterations */
+    padding-bottom: .5em;
+
+    /* type styles */
+    text-align: center;
+}
+
+.sequence-next,
+.sequence-prev {
+    /* box-model alterations */
+    margin: 0 3em;
+
+    /* type styles */
+    font-weight: 700;
+    text-transform: uppercase;
+    text-decoration: none;
+
+    /* aesthetics */
+    color: #fff;
+}
+
+.sequence-buttons i {
+    /* positioning */
+    position: relative;
+
+    /* transitions */
+    -webkit-transition: all 0.5s ease;
+       -moz-transition: all 0.5s ease;
+         -o-transition: all 0.5s ease;
+        -ms-transition: all 0.5s ease;
+            transition: all 0.5s ease;
+}
+
+.sequence-prev i {
+    left: -5px;
+}
+
+.sequence-next i {
+    left: 5px;
+}
+
+.sequence-prev:hover i{
+    left: -10px;
+}
+
+.sequence-next:hover i{
+    left: 10px;
+}
+
+.content-secondary {
+    /* positioning */
+    position: relative;
+    z-index: 2000;
+
+    /* box-model alterations */
+    padding: 0 20px 1em;
+
+    /* aesthetics */
+    background-color: #fff;
+    -webkit-box-shadow: 0 0 8px #1d1a1c;
+       -mox-box-shadow: 0 0 8px #1d1a1c;
+            box-shadow: 0 0 8px #1d1a1c;
+
+    /* etc... */
+    overflow: auto;
+}
+
+.link-list {
+    /* box-model alterations */
+    padding: 0;
+    margin: 0;
+
+    /* aesthetics */
+    list-style-type: none;
+}
+
+.link-list li {
+    /* box-model alterations */
+    margin: 1em 0;
+}
+
+.link-list a {
+    /*dimensions */
+    width: 100%;
+}
+
+.link-list i {
+    /* box-model alterations */
+    margin-right: 1em;
+}
+
+/*
+ resume page
+ */
+
+.resume {
+    /* box-model alterations */
+    padding: 20px 10px;
+
+    /* aesthetics */
+    background: #fff url('../img/lightpaperfibers_@2x.png');
+
+    /* etc... */
+    overflow: auto;
+}
+
+.resume-introduction .logo {
+    /* dimensions */
+    max-width: 120px;
+}
+
+.company-name {
+    /* type styles */
+    font-size: 2.5em;
+    line-height: .75;
+}
+
+.job-title {
+    /* type styles */;
+    font-size: 1.25em;
+    line-height: 1;
+}
+
+.job-title strong {
+    /* type styles */
+    font-family: 'Sorts Mill Goudy', serif;
+}
+
+p.tel {
+    /* box-model alterations */
+    margin: 1em 0;
+
+    /* type styles */
+    font-size: 1.1em;
+}
+
+.resume-link {
+    /* box-model alterations */
+    margin-right: .25em;
+    padding: .25em;
+
+    /*type styles */
+    font-family: 'Sorts Mill Goudy', serif;
+    text-decoration: none;
+    line-height: 2;
+
+    /* aesthetics */
+    color: #1d1a1c;
+    background-color: #eee;
+
+    /* transitions */
+    -webkit-transition: all 0.25s ease;
+       -moz-transition: all 0.25s ease;
+         -o-transition: all 0.25s ease;
+        -ms-transition: all 0.25s ease;
+            transition: all 0.25s ease;
+}
+
+.resume-link:visited {
+    /* aesthetics */
+    color: #af1e3c;
+    background-color: #eee;
+}
+
+.resume-link:hover {
+    /* aesthetics */
+    color: #fff;
+    background-color: #af1e3c;
+}
+
+.resume-link:active {
+    /* aesthetics */
+    color: #af1e3c;
+    background-color: #eee;
+}
+
+.contacts {
+    /* box-model alterations */
+    margin-bottom: 1.5em;
+}
+
+.drop-cap:first-letter {
+    /* box-model alterations */
+    margin-top: .05em;
+    margin-right: .15em;
+
+    /* positioning */
+    float: left;
+
+    /*type styles */
+    font-family: 'Sorts Mill Goudy', serif;
+    font-size: 3.5em;
+}
+
+.section-title {
+    /* type styles */
+    font-size: 1.5em;
+    line-height: 3;
+}
+
+.resume-job {
+    /* box-model alterations */
+    padding-left: .75em;
+    margin-bottom: 2em;
+}
+
+.resume-job:last-of-type {
+    /* box-model alterations */
+    margin-bottom: 0;
+}
+
+.job-position {
+    /* box-model alterations */
+    margin: 0;
+}
+
+.date-range {
+    /* box-model alterations */
+    margin-left: .25em;
+}
+
+ul.job-duties,
+ul.icons-ul {
+    /* box-model alterations */
+    margin: .5em 0 0 0 !important;
+}
+
+.job-duties > li {
+    /* box-model alterations */
+    margin-bottom: .5em;
+
+    /* type styles */
+    line-height: 1.25;
+}
+
+.job-duties > li:last-of-type {
+    /* box-model alterations */
+    margin-bottom: 0;
+}
+
+.resume-volunteer {
+    /* box-model alterations */
+    margin-top: 1em;
+}
+
+.resume-sup {
+    /* box-model alterations */
+    margin-top: 2em;
+}
+
+.education,
+.expertise {
+    /* box-model alterations */
+    padding-right: 1em;
+}
+
+.education p {
+    /* type styles */
+    font-family: 'Sorts Mill Goudy', serif;
+}
+
+.expertise > ul {
+    /* box-model alterations */
+    padding-left: 0;
+
+    /* aesthetics */
+    list-style-type: none;
+}
+
+.end-reward {
+    /* box-modle alterations */
+    padding-left: 10px;
+    padding-right: 10px;
+
+    /* aesthetics */
+    background-color: #fff;
+    -webkit-box-shadow: 0 0 8px #1d1a1c;
+       -mox-box-shadow: 0 0 8px #1d1a1c;
+            box-shadow: 0 0 8px #1d1a1c;
+
+    /* etc... */
+    overflow: auto;
+}
+ 
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Image replacement
+ */
+
+.ir {
+    background-color: transparent;
+    border: 0;
+    overflow: hidden;
+    /* IE 6/7 fallback */
+    *text-indent: -9999px;
+}
+
+.ir:before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 150%;
+}
+
+/*
+ * Hide from both screenreaders and browsers: h5bp.com/u
+ */
+
+.hidden {
+    display: none !important;
+    visibility: hidden;
+}
+
+/*
+ * Hide only visually, but have it available for screenreaders: h5bp.com/v
+ */
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+/*
+ * Extends the .visuallyhidden class to allow the element to be focusable
+ * when navigated to via the keyboard: h5bp.com/p
+ */
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+/*
+ * Hide visually and from screenreaders, but maintain layout
+ */
+
+.invisible {
+    visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+/*
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+
+.clearfix {
+    *zoom: 1;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 50em) {
+    /* Style adjustments for viewports that meet the condition */
+
+    .page {
+        /* aesthetics */
+        background: #fbfbdb; /* Old browsers */
+        background: -moz-linear-gradient(top,  #fbfbdb 0%, #b05471 75%); /* FF3.6+ */
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#fbfbdb), color-stop(75%,#b05471)); /* Chrome,Safari4+ */
+        background: -webkit-linear-gradient(top,  #fbfbdb 0%,#b05471 75%); /* Chrome10+,Safari5.1+ */
+        background: -o-linear-gradient(top,  #fbfbdb 0%,#b05471 75%); /* Opera 11.10+ */
+        background: -ms-linear-gradient(top,  #fbfbdb 0%,#b05471 75%); /* IE10+ */
+        background: linear-gradient(to bottom,  #fbfbdb 0%,#b05471 75%); /* W3C */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fbfbdb', endColorstr='#b05471',GradientType=0 ); /* IE6-9 */
+    }
+
+    .one-fourth,
+    .three-fourths,
+    .one-whole, {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .one-fourth {
+        width: 25%;
+    }
+
+    .three-fourths {
+        width: 75%;
+    }
+
+    .one-whole {
+        width: 100%;
+    }
+
+    .one-third {
+        width: 33.3333%;
+    }
+
+    .two-thirds {
+        width: 66.6666%;
+    }
+
+    #sequence figcaption {
+        margin-top: -1em;
+    }
+
+    .contacts {
+        margin-bottom: 5em;
+    }
+
+    .resume-sup {
+        margin-top: 0;
+    }
+}
+
+@media print,
+       (-o-min-device-pixel-ratio: 5/4),
+       (-webkit-min-device-pixel-ratio: 1.25),
+       (min-resolution: 120dpi) {
+    /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid required HTTP connection: h5bp.com/r
+   ========================================================================== */
+
+@media print {
+    * {
+        background: transparent !important;
+        color: #000 !important; /* Black prints faster: h5bp.com/s */
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    /*
+     * Don't show links for images, or javascript/internal links
+     */
+
+    .ir a:after,
+    a[href^="javascript:"]:after,
+    a[href^="#"]:after {
+        content: "";
+    }
+
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    thead {
+        display: table-header-group; /* h5bp.com/t */
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
+    }
+
+    @page {
+        margin: 0.5cm;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}
